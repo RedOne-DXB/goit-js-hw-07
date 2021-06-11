@@ -1,15 +1,14 @@
-const categoryRef = document.querySelector('#categories');
-console.dir(`В списке ${categoryRef.children.length} категории`);
+const itemCount = document.querySelectorAll('.item');
+console.log(`В списке ${itemCount.length} категории`);
 
-const titleRef = document.querySelector('h2');
-console.log(`Категория: ${titleRef.textContent}`);
+const parentUlRef = document.getElementById('categories');
+const elementList = parentUlRef.querySelectorAll('ul');
+const array = [...elementList];
 
-const categoryElements = document.querySelector('.item');
-console.log(`Количество элементов: ${categoryElements.lastElementChild.children.length}`);
-
-// const categoryRef = document.querySelector('#categories');
-// let iteration = categoryRef.children.forEach(myFunction);
-
-// function myFunction(value) {
-//     console.log(categoryRef.children);
-// }
+array.forEach(function (el) {
+  const headingRef = el.previousElementSibling.textContent;
+  console.log(`Категория: ${headingRef}`);
+ 
+  const listItemsCount = el.children.length;
+   console.log(`Количество элементов: ${listItemsCount}`)
+});

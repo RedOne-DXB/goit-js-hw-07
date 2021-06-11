@@ -7,8 +7,6 @@ const increment = function (i) {
     }
 }
 
-let i = 5;
-console.log(increment(i))
 
 const decrement = function (y) {
     for (let y = 0; y < decrement.length; y--) {
@@ -19,5 +17,4 @@ const decrement = function (y) {
     }
 }
 
-console.log(decrement(10))
 
