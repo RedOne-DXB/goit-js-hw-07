@@ -1,9 +1,8 @@
-const categoryRef = document.querySelectorAll('#categories>li');
-console.dir(`В списке ${categoryRef.length} категории`);
+const categoryRef = document.querySelector('#categories');
+console.dir(`В списке ${categoryRef.children.length} категории`);
 
-const categoryListRef = document.querySelectorAll('.item');
-console.log(categoryListRef);
+const titleRef = document.querySelector('h2');
+console.log(`Категория: ${titleRef.textContent}`);
 
-const displayCategory = categoryListRef.forEach((category) => {
-    console.log(category.querySelector('h2'))
-});
+const categoryElements = document.querySelector('.item');
+console.log(`Количество элементов: ${categoryElements.lastElementChild.children.length}`);
