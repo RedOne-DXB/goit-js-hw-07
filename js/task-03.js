@@ -17,7 +17,9 @@ const ulListRef = document.querySelector('#gallery');
 
 const imagesList = images.map(image => {
     let newLi = document.createElement('li');
+    newLi.classList.add('gallery__item')
     let newImage = document.createElement('img');
+    newImage.classList.add('gallery__image')
 
     newLi.appendChild(newImage)
     ulListRef.appendChild(newLi);
