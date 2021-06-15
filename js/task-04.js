@@ -1,6 +1,4 @@
-const spanRef = document.getElementById('value');
-console.log(spanRef);
-const counterValue = spanRef;
+let counterValue = document.getElementById('value');
 counterValue.textContent = value;
 console.log(counterValue);
 
@@ -9,20 +7,12 @@ const decrementBtn = document.querySelector('[data-action = "decrement"]');
 
 incrementBtn.addEventListener('click', increment => {
     console.log('Раз-раз!')
-});
+   });
 
-function increment (event) {
-    return counterValue.value += 1;
+function increment() {
+    let count = 0;
+    counterValue = ++count;
 }
 
-
-// const decrement = function (y) {
-//     for (let y = 0; y < decrement.length; y--) {
-//         let count = 0;
-//         count -= y;
-
-//         return count;
-//     }
-// }
 
 
