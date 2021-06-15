@@ -1,18 +1,49 @@
-let counterValue = document.getElementById('value');
-counterValue.textContent = value;
-console.log(counterValue);
+// const counterValue = {
+//     value: 0,
+//     increment() {
+//         this.value += 1;
+//     },
+//     decrement() {
+//         this.value -= 1;
+//     },
+// };
 
-const incrementBtn = document.querySelector('[data-action = "increment"]');
-const decrementBtn = document.querySelector('[data-action = "decrement"]');
 
-incrementBtn.addEventListener('click', increment => {
-    console.log('Раз-раз!')
-   });
+// const counter = document.getElementById('value');
+// console.log(counterValue);
 
-function increment() {
-    let count = 0;
-    counterValue = ++count;
-}
+// const incrementBtn = document.querySelector('[data-action = "increment"]');
+// const decrementBtn = document.querySelector('[data-action = "decrement"]');
+
+// incrementBtn.addEventListener('click', e => {
+//     console.log('Просто проверка работы прослушивания события')
+//     counterValue.increment();
+//     counter.textContent = counterValue.value
+// });
+   
+// decrementBtn.addEventListener('click', e => {
+//     console.log('Просто проверка работы прослушивания события')
+//     counterValue.decrement();
+//     counter.textContent = counterValue.value
+//    });
+
+let getValue = document.getElementById('value');
+console.log(getValue);
+
+const incrementBtn = document.querySelector('[data-action="increment"]');
+const decrementBtn = document.querySelector('[data-action="decrement"]');
+
+let counterValue = 0;
+
+incrementBtn.addEventListener('click', () => {
+    getValue.textContent = counterValue += 1;
+});
+
+decrementBtn.addEventListener('click', () => {
+        getValue.textContent = counterValue -= 1;
+});
+
+
 
 
 
