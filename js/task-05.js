@@ -3,16 +3,15 @@ console.log(nameInput);
 let nameOutput = document.getElementById('name-output');
 console.log(nameOutput);
 
-// nameInput.addEventListener('focus', e => {
-//     nameInput.style.display = 'block';
-// });
+const defaultVal = nameOutput.defaultValue;
 
-nameInput.addEventListener('input', e => {
-    console.log(e.currentTarget.value);
-    if (e.currentTarget.value.trim()) {
-        return nameOutput.value;
+
+nameInput.addEventListener('input', event => {
+    if (nameOutput.value == 0) {
+        defaultVal; // {`незнакомец`} ??? 
     } else {
-        nameOutput.textContent = e.currentTarget.value;
+        nameOutput.textContent = event.target.value;
     }
 });
+
 
