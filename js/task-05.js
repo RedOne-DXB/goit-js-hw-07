@@ -7,12 +7,12 @@ console.log(nameOutput);
 //     nameInput.style.display = 'block';
 // });
 
-nameInput.addEventListener('blur', e => {
+nameInput.addEventListener('input', e => {
     console.log(e.currentTarget.value);
-    if (e.currentTarget.value = null) {
-        return nameOutput;
+    if (e.currentTarget.value.trim()) {
+        return nameOutput.value;
     } else {
-        nameOutput = e.currentTarget.value;
+        nameOutput.textContent = e.currentTarget.value;
     }
 });
 
