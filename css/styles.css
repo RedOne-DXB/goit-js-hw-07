@@ -13,6 +13,9 @@ image {
 }
 
 #gallery {
+  margin: 0;
+  padding: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +23,7 @@ image {
 }
 
 .gallery__item {
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
 .gallery__item:last-child {

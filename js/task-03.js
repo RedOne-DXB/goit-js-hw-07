@@ -13,21 +13,48 @@ const images = [
   },
 ];
 
-const ulListRef = document.querySelector('#gallery');
+const imagesList = document.querySelector('#gallery');
 
-const imagesList = images.map(image => {
-    let newLi = document.createElement('li');
-    newLi.classList.add('gallery__item')
-    let newImage = document.createElement('img');
-    newImage.classList.add('gallery__image')
+const items = [];
 
-    newLi.appendChild(newImage)
-    ulListRef.appendChild(newLi);
 
-    newImage.src = image.url;
-    newImage.alt = image.alt;
-});
 
-document.body.appendChild(ulListRef);
+// function createElements(images) {
+//   for (let image of images) {
+//     const { url, alt } = image;
 
-console.log(ulListRef);
+//     const newLi = document.createElement('li');
+//     newLi.classList.add('gallery__item');
+
+//     const newImage = document.createElement('img');
+//     newImage.classList.add('gallery__image');
+
+//     newImage.src = `${url}`;
+//     newImage.alt = `${alt}`;
+
+//     newLi.insertAdjacentElement('afterbegin', newImage);
+//     items.push('newLi')
+  
+//   }
+// }
+
+// createElements(images);
+
+// const ulListRef = document.querySelector('#gallery');
+
+// const imagesList = images.map(image => {
+//     let newLi = document.createElement('li');
+//     newLi.classList.add('gallery__item')
+//     let newImage = document.createElement('img');
+//     newImage.classList.add('gallery__image')
+
+//     newLi.appendChild(newImage)
+//     ulListRef.appendChild(newLi);
+
+//     newImage.src = image.url;
+//     newImage.alt = image.alt;
+// });
+
+// document.body.appendChild(ulListRef);
+
+// console.log(ulListRef);
