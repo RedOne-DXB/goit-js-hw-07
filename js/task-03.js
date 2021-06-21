@@ -13,48 +13,38 @@ const images = [
   },
 ];
 
-const imagesList = document.querySelector('#gallery');
+const imgList = document.querySelector('#gallery');
+imgList.classList.add('#gallery');
 
-const items = [];
+const addImg = images => {
+ return `<li><img src= '${images.url}' alt ='${images.alt}'  width='320' height='240'/></li>`;
+}
+
+const compilationImg = images.map(addImg).join('');
+console.log(compilationImg);
+
+const imgEl = document.querySelectorAll('img');
+console.log(imgEl)
+imgList.insertAdjacentHTML('beforeend',compilationImg);
+document.body.appendChild(imgList);
 
 
+//======= Alternative script reserved for personal use =======
 
-// function createElements(images) {
-//   for (let image of images) {
-//     const { url, alt } = image;
+// const ulRef = document.querySelector('#gallery');
 
-//     const newLi = document.createElement('li');
-//     newLi.classList.add('gallery__item');
-
-//     const newImage = document.createElement('img');
-//     newImage.classList.add('gallery__image');
-
-//     newImage.src = `${url}`;
-//     newImage.alt = `${alt}`;
-
-//     newLi.insertAdjacentElement('afterbegin', newImage);
-//     items.push('newLi')
-  
-//   }
-// }
-
-// createElements(images);
-
-// const ulListRef = document.querySelector('#gallery');
-
-// const imagesList = images.map(image => {
+// const imgList = images.map(image => {
 //     let newLi = document.createElement('li');
 //     newLi.classList.add('gallery__item')
-//     let newImage = document.createElement('img');
-//     newImage.classList.add('gallery__image')
+//     let newImg = document.createElement('img');
+//     newImg.classList.add('gallery__image')
 
-//     newLi.appendChild(newImage)
-//     ulListRef.appendChild(newLi);
+//     newLi.appendChild(newImg)
+//     ulRef.appendChild(newLi);
 
-//     newImage.src = image.url;
-//     newImage.alt = image.alt;
+//     newImg.src = image.url;
+//     newImg.alt = image.alt;
 // });
 
 // document.body.appendChild(ulListRef);
-
-// console.log(ulListRef);
+// console.log(ulRef);
