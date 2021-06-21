@@ -23,8 +23,6 @@ const addImg = images => {
 const compilationImg = images.map(addImg).join('');
 console.log(compilationImg);
 
-const imgEl = document.querySelectorAll('img');
-console.log(imgEl)
 imgList.insertAdjacentHTML('beforeend',compilationImg);
 document.body.appendChild(imgList);
 
